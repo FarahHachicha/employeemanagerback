@@ -41,7 +41,7 @@ pipeline{
               stage ('SonarQube'){
               steps{
               withSonarQubeEnv('My SonarQube Server'){
-              sh 'mvn sonar:sonar '
+              sh 'mvn sonar:sonar -Dsonar.login=squ_b5b2f1833a8e130e15864ebc7ea3786475a2ca8a'
               }
 
               }
