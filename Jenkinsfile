@@ -1,3 +1,4 @@
+
 pipeline{
        agent any
        tools{
@@ -27,9 +28,22 @@ pipeline{
                      }
                      post{
                            always{
-                                  junit 'target/failsafe-reports/*.xml'
+                                  junit (testResults:'target/failsafe-reports/*.xml',allowEmptyResults: true)
+                            }
+                            success{
+                                   stash(name : 'artifact' , includes :'target/*.jar')
+                                   stash(name : 'pom' , includes :'pom.xml')
+                                   archiveArtifacts 'target/*.jar'
+
                             }
                      }
+              }
+              stage ('SonarQube'){
+              steps{
+              sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000
+'
+              }
+
               }
        }
 

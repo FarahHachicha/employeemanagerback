@@ -1,0 +1,6 @@
+projectKey=tech.getarrays:employeemanager
+serverUrl=http://localhost:9000
+serverVersion=7.1.0.11001
+dashboardUrl=http://localhost:9000/dashboard/index/tech.getarrays:employeemanager
+ceTaskId=AYHIWba8xdpE5hxsg9zw
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYHIWba8xdpE5hxsg9zw
