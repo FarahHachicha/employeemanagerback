@@ -1,0 +1,23 @@
+Starting Selenium Grid
+[jenkins_home] $ /opt/java/openjdk/bin/java -cp /var/jenkins_home/war/WEB-INF/lib/remoting-4.13.2.jar hudson.remoting.Launcher -cp /var/jenkins_home/plugins/selenium/WEB-INF/lib/selenium-server-standalone-3.141.59.jar:/var/jenkins_home/plugins/selenium/WEB-INF/lib/htmlunit-driver-standalone-2.33.3.jar -connectTo localhost:38945
+Jul 11, 2022 8:23:37 AM hudson.remoting.Launcher addClasspath
+WARNING: [JENKINS-64831] Passing -cp to hudson.remoting.Launcher is deprecated and may not work at all on Java 9+
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by hudson.remoting.Launcher (file:/var/jenkins_home/war/WEB-INF/lib/remoting-4.13.2.jar) to method java.net.URLClassLoader.addURL(java.net.URL)
+WARNING: Please consider reporting this to the maintainers of hudson.remoting.Launcher
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Exception in thread "main" java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.remoting.Launcher.addClasspath(Launcher.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at io.jenkins.remoting.shaded.org.kohsuke.args4j.spi.MethodSetter.addValue(MethodSetter.java:47)
+	at io.jenkins.remoting.shaded.org.kohsuke.args4j.spi.StringOptionHandler.parseArguments(StringOptionHandler.java:19)
+	at io.jenkins.remoting.shaded.org.kohsuke.args4j.CmdLineParser.parseArgument(CmdLineParser.java:520)
+	at hudson.remoting.Launcher.main(Launcher.java:292)

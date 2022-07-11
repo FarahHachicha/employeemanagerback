@@ -1,0 +1,38 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="junit@1119.1121.vc43d0fc45561">
+  <suites>
+    <suite>
+      <file>/var/jenkins_home/workspace/Stage_1/target/surefire-reports/TEST-tech.getarrays.employeemanager.EmployeemanagerApplicationTests.xml</file>
+      <name>tech.getarrays.employeemanager.EmployeemanagerApplicationTests</name>
+      <duration>4.445</duration>
+      <time>4.445</time>
+      <nodeId>38</nodeId>
+      <enclosingBlocks>
+        <string>32</string>
+      </enclosingBlocks>
+      <enclosingBlockNames>
+        <string>Unit Test</string>
+      </enclosingBlockNames>
+      <cases>
+        <case>
+          <duration>0.102</duration>
+          <className>tech.getarrays.employeemanager.EmployeemanagerApplicationTests</className>
+          <testName>contextLoads</testName>
+          <skipped>false</skipped>
+          <stdout>20:42:45.447 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+20:42:45.455 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+20:42:
+...[truncated 10081 chars]...
+y for persistence unit &apos;default&apos;
+2022-07-02 20:42:49.224  WARN 28407 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-02 20:42:49.690  INFO 28407 --- [           main] t.g.e.EmployeemanagerApplicationTests    : Started EmployeemanagerApplicationTests in 3.899 seconds (JVM running for 4.981)
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>4.445</duration>
+  <skipOldReports>false</skipOldReports>
+  <keepLongStdio>false</keepLongStdio>
+</result>

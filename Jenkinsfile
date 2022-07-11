@@ -1,4 +1,3 @@
-
 pipeline{
        agent any
        tools{
@@ -16,7 +15,7 @@ pipeline{
                      }
                      post{
                            always{
-                                  junit 'target/surefire-reports/TEST-tech.getarrays.employeemanager.EmployeemanagerApplicationTests.xml'
+                                  junit 'target/surefire-reports/TEST-*.xml'
                             }
                      }
 
@@ -40,8 +39,13 @@ pipeline{
               }
               stage ('SonarQube'){
               steps{
-              withSonarQubeEnv('My SonarQube Server'){
-              sh 'mvn sonar:sonar -Dsonar.login=squ_b5b2f1833a8e130e15864ebc7ea3786475a2ca8a'
+
+
+
+              withSonarQubeEnv(installationName: 'My SonarQube Server'){
+             // sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000'
+                    // sh 'mvn sonar:sonar'
+                     echo "sonar"
               }
 
               }

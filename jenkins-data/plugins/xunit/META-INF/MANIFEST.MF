@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: nfalco@siav.net
+Build-Jdk: 11.0.15
+Extension-Name: xunit
+Specification-Title: The Jenkins Plugins Parent POM Project
+Implementation-Title: xunit
+Implementation-Version: 3.1.0
+Group-Id: org.jenkins-ci.plugins
+Short-Name: xunit
+Long-Name: xUnit plugin
+Url: https://github.com/jenkinsci/xunit-plugin
+Compatible-Since-Version: 3.0.0
+Minimum-Java-Version: 1.8
+Plugin-Version: 3.1.0
+Hudson-Version: 2.222.4
+Jenkins-Version: 2.222.4
+Plugin-Dependencies: jaxb:2.3.0.1,dtkit-api:3.0.1,junit:1.46,structs:1
+ .20
+Plugin-Developers: Gregory Boissinot:gboissinot:gregory.boissinot@gmai
+ l.com,Nikolas Falco:nfalco79:nfalco79@hotmail.com
+Plugin-License-Name: MIT license
+Plugin-ScmUrl: https://github.com/jenkinsci/plugin-pom/xunit
+

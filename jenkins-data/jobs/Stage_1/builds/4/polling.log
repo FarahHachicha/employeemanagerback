@@ -1,0 +1,12 @@
+Started on Jul 5, 2022, 11:46:07 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision e74c0a29cd265728ab7163528be9a070cfbb33df (refs/remotes/origin/main)
+The recommended git tool is: git
+No credentials specified
+ > git --version # timeout=10
+ > git --version # 'git version 2.36.1'
+ > git ls-remote -h -- https://github.com/FarahHachicha/employeemanagerback.git # timeout=10
+Found 1 remote heads on https://github.com/FarahHachicha/employeemanagerback.git
+[poll] Latest remote head revision on refs/heads/main is: f36c79dbbee7a85c5d07478e50f63156c64a641f
+Done. Took 0.89 sec
+Changes found
