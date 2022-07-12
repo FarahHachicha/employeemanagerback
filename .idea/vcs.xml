@@ -4,6 +4,7 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins-data/caches/git-fb7d8eeed637959910afa4fb8a8568ca" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins-data/workspace/Stage_1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins-data/workspace/Stage_1@2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins-data/workspace/employeemanagerback_main" vcs="Git" />
   </component>
 </project>

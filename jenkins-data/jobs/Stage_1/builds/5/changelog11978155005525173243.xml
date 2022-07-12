@@ -1,9 +1,0 @@
-commit 2fb9f309ae999096e62e754928eb221b6b948493
-tree fbc6dc1a189656acf2570c25fffeb1306a999b83
-parent f36c79dbbee7a85c5d07478e50f63156c64a641f
-author FarahHachicha <88801818+FarahHachicha@users.noreply.github.com> 2022-07-05 12:56:05 +0100
-committer GitHub <noreply@github.com> 2022-07-05 12:56:05 +0100
-
-    Update Jenkinsfile
-
-:100644 100644 c3b6743669dd377acaff60ce597bd0d600338dbe 866c05ddc9e67c2a14e0011f495990f40732b091 M	Jenkinsfile
