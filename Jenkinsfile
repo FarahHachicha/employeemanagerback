@@ -7,11 +7,13 @@ pipeline{
               stage('Build'){
                      steps{
                             sh 'mvn compile'
+                            echo " Build success"
                      }
               }
               stage('Unit Test'){
                      steps{
                             sh 'mvn test'
+                            echo " UNit test success"
                      }
                      post{
                            always{
@@ -24,6 +26,7 @@ pipeline{
               stage ('Integration Test'){
                      steps {
                             sh 'mvn verify -Dsurefire.skip=true'
+                            echo " Integrayion test success"
                      }
                      post{
                            always{
