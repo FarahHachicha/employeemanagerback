@@ -48,8 +48,8 @@ pipeline{
               withSonarQubeEnv('My SonarQube', envOnly: true){
                   //   sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000'
                     // sh 'mvn sonar:sonar'
-                   //  echo "sonar"
-                     echo ${env.SONAR_HOST_URL} 
+                    echo "sonar"
+                     //echo ${env.SONAR_HOST_URL} 
 
               }
 
