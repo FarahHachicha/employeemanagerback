@@ -1,7 +1,10 @@
 pipeline{
        agent any
+
        tools{
               maven 'maven'
+             // scannerHome 'sonarqube'
+
        }
        stages{
               stage('Build'){
@@ -26,7 +29,7 @@ pipeline{
               stage ('Integration Test'){
                      steps {
                             sh 'mvn verify -Dsurefire.skip=true'
-                            echo " Integrayion test success"
+                            echo " Integration test success"
                      }
                      post{
                            always{
@@ -41,21 +44,29 @@ pipeline{
                      }
               }
               stage ('SonarQube'){
-              steps{
 
 
 
-              withSonarQubeEnv(installationName:'My SonarQube'){
+                     steps{
+
+              withSonarQubeEnv('sonarqube'){
+
                   //   sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000'
-                    // sh 'mvn sonar:sonar'
+                 //    sh 'mvn sonar:sonar'
+                    // sh " mvn sonar:sonar -Dsonar.host.url=$SONARQUBE_URL:$SONARQUBE_PORT"
                     echo "sonar"
-                     //echo ${env.SONAR_HOST_URL} 
+                     /*sh  " mvn sonar:sonar \
+                       sonar.login=admin \
+                       -Dsonar.password=admin \
+                    -Dsonar.projectkey=jenkinssonar \
+                     -Dsonar.host.url=http://localhost:9000/projects "*/
 
               }
 
               }
 
               }
+
        }
 
 }
