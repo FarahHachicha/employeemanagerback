@@ -69,9 +69,9 @@ pipeline{
               stage('Create and push container') {
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'farahhachicha', passwordVariable: 'farahhachicha')]) {
-          withMaven(maven : 'maven') {
+    
             sh "mvn jib:build"
-          }
+          
         }
       } 
     }
