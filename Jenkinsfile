@@ -70,7 +70,7 @@ pipeline{
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'farahhachicha', passwordVariable: 'farahhachicha')]) {
     
-            sh "mvn jib:build"
+            sh "mvn spring-boot:build-image"
           
         }
       } 
