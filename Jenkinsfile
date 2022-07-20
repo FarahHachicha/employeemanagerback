@@ -110,6 +110,13 @@ pipeline{
                             }
                      }
               }
+              stage ('Deploy'){
+                    steps{
+                           script{
+                                 kubernetesDeploy(configs: "deployment.yaml", kubeconfigId: "kubernetes")
+                                 }
+                         }
+                             }
 
        }
 
