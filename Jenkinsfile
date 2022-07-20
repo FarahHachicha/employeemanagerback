@@ -1,4 +1,8 @@
 pipeline{
+       environment{
+              dockerimagename = "farahhachicha/jenkins"
+              dockerImage = ""
+       }
        agent any
 
        tools{
@@ -66,7 +70,7 @@ pipeline{
               }
 
               }
-              stage('Create and push container') {
+           /*   stage('Create and push container') {
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'farahhachicha', passwordVariable: 'farahhachicha')]) {
     
@@ -86,7 +90,26 @@ pipeline{
           sh './kubectl apply -f deployment.yaml'
         }
       } 
-    }
+    }*/
+              stage('Build image'){
+                     steps{
+                            script{
+                                   dockerImage = docker.build dockerimagename
+                            }
+                     }
+              }
+              stage ('Pushing Image'){
+                     environment{
+                            registryCredential = 'dockerHub'
+                     }
+                     steps{
+                            script{
+                                   docker.withRegistry ('http://registry.hub.docker.com', registryCredential){
+                                          dockerImage.push("latest")
+                                   }
+                            }
+                     }
+              }
 
        }
 
