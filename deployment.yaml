@@ -18,7 +18,7 @@ spec:
         app: employeemanager
     spec:
       containers:
-      - image: docker.io/library/employeemanager:0.0.1-SNAPSHOT
+      - image: farahhachicha/jenkins
         name: employeemanager
         resources: {}
 status: {}
