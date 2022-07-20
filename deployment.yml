@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employeemanager-deployment
+  labels:
+    app: employeemanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: employeemanager
+  template:
+    metadata:
+      labels:
+        app: employeemanager 
+    spec:
+      containers:
+      - name: employeemanager
+        image: registry.hub.docker.com/farahhachicha/jenkins:latest
+        ports:
+        - containerPort: 3000
+               
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: employeemanager-service
+spec:
+  selector:
+    app: employeemanager 
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 3000
+    nodePort: 31110
+
+
+
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
