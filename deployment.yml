@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: employeemanager
-        image: registry.hub.docker.com/farahhachicha/jenkins:latest
+        image: farahhachicha/jenkins:latest
         ports:
         - containerPort: 3000
                
