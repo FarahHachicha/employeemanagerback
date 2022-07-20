@@ -1,9 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: employeemanager-deployment
+  creationTimestamp: null
+  
   labels:
     app: employeemanager
+    name: employeemanager-Deploy
 spec:
   replicas: 1
   selector:
@@ -11,6 +13,7 @@ spec:
       app: employeemanager
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: employeemanager 
     spec:
@@ -24,10 +27,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: employeemanager-service
+   creationTimestamp: null
 spec:
   selector:
     app: employeemanager 
+    name: employeemanager-service
   type: LoadBalancer
   ports:
   - protocol: TCP
