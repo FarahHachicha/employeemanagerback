@@ -5,7 +5,7 @@ metadata:
   
   labels:
     app: employeemanager
-    name: employeemanager-Deploy
+ 
 spec:
   replicas: 1
   selector:
