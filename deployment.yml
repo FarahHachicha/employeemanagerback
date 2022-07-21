@@ -1,42 +1,44 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- 
-  name: kubernetes
-  
+  creationTimestamp: null
   labels:
     app: employeemanager
- 
+  name: employeemanager
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: employeemanager
+  strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: employeemanager 
+        app: employeemanager
     spec:
       containers:
-      - name: employeemanager
-        image: farahhachicha/jenkins:latest
-        ports:
-        - containerPort: 3000
-               
+      - image: farahhachicha/jenkins:latest
+        name: employeemanager
+        resources: {}
+status: {}
 ---
 apiVersion: v1
 kind: Service
 metadata:
-   creationTimestamp: null
+  creationTimestamp: null
+  labels:
+    app: employeemanager
+  name: employeemanager
 spec:
-  selector:
-    app: employeemanager 
-    name: employeemanager-service
-  type: LoadBalancer
   ports:
-  - protocol: TCP
-    port: 5000
-    targetPort: 3000
-    nodePort: 31110
-
+  - name: 8081-8081
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: employeemanager
+  type: ClusterIP
+status:
+  loadBalancer: {}
