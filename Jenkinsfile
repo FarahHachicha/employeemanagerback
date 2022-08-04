@@ -53,7 +53,7 @@ pipeline{
 
                      steps{
 
-              withSonarQubeEnv(credentialsId: '17a9b34d736a635d84914ef06692ba0456ac53c2', installationName: 'sonarqube'){
+              withSonarQubeEnv('sonarqube'){
                       sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
 
                   //   sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000'
